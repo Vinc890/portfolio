@@ -132,7 +132,7 @@ const experiences = [
     title: "Software Developer Intern",
     company_name: "BlitzCode Systems",
     icon: tesla,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Jan 2021 - Feb 2022",
     points: [
       "Completed website migration tasks as an intern at BlitzCode Systems, successfully transitioning existing websites to Next.js, a powerful React framework that enables server-side rendering and enhanced performance.",
