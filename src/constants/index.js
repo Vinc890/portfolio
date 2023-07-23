@@ -19,9 +19,10 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  pharma,
+  todo,
+  typingame,
+  vuconnect,
   threejs,
 } from "../assets";
 
@@ -172,7 +173,27 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "VUConnect",
+    description:"he purpose of VU Connect is to create a vibrant and inclusive social networking platform exclusively for the VU community, including current students, faculty, and alumni.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: vuconnect,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Pharma-Website-Template",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
@@ -189,13 +210,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: pharma,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "ToDo-List",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "I created a To-Do List website using React.js with basic functionalities such as adding, completing, updating, and deleting tasks. The main objective was to create a user-friendly interface with a dark theme that effectively highlights the tasks. The website allows users to easily manage and organize their tasks. ",
     tags: [
       {
         name: "react",
@@ -210,13 +231,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: todo,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Typing-Game",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "I have developed a typing game using HTML, CSS, and JavaScript. The game includes a timer that starts when the game begins and generates random sentences for typing practice. As players type, the text is dynamically highlighted to indicate the accuracy of their typing. Correctly typed characters are highlighted differently from incorrect ones. This interactive feedback helps players improve their typing skills by providing real-time feedback.",
     tags: [
       {
         name: "nextjs",
@@ -231,7 +252,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: typingame,
     source_code_link: "https://github.com/",
   },
 ];

@@ -1,11 +1,11 @@
 Model Information:
-* title:	Gaming Desktop PC
-* source:	https://sketchfab.com/3d-models/gaming-desktop-pc-d1d8282c9916438091f11aeb28787b66
-* author:	Yolala1232 (https://sketchfab.com/Yolala1232)
+* title:	Flux's Pit Stop
+* source:	https://sketchfab.com/3d-models/fluxs-pit-stop-6bb8bd116e384d9f9e7041dbb84e5e24
+* author:	Phil_XG (https://sketchfab.com/phil_xg)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Gaming Desktop PC" (https://sketchfab.com/3d-models/gaming-desktop-pc-d1d8282c9916438091f11aeb28787b66) by Yolala1232 (https://sketchfab.com/Yolala1232) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Flux's Pit Stop" (https://sketchfab.com/3d-models/fluxs-pit-stop-6bb8bd116e384d9f9e7041dbb84e5e24) by Phil_XG (https://sketchfab.com/phil_xg) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

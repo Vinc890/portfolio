@@ -26,9 +26,10 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import pharma from "./pharma.png";
+import todo from "./todo.png";
+import vuconnect from "./vuconnect.png";
+import typingame from "./typingame.png"
 
 export {
   logo,
@@ -56,7 +57,8 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
+  pharma,
+  todo,
+  typingame,
+  vuconnect,
 };
