@@ -190,6 +190,7 @@ const projects = [
       },
     ],
     image: vuconnect,
+    clickme: "https://typiingame.netlify.app/",
     source_code_link: "https://github.com/",
   },
   {
@@ -211,6 +212,7 @@ const projects = [
       },
     ],
     image: pharma,
+    clickme: "https://virtue-pharma.netlify.app/",
     source_code_link: "https://github.com/",
   },
   {
@@ -232,6 +234,7 @@ const projects = [
       },
     ],
     image: todo,
+    clickme: "https://yourt0d0list.netlify.app/",
     source_code_link: "https://github.com/",
   },
   {
@@ -253,6 +256,7 @@ const projects = [
       },
     ],
     image: typingame,
+    clickme: "https://typiiingame.netlify.app/",
     source_code_link: "https://github.com/",
   },
 ];
