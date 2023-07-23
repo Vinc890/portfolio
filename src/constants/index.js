@@ -43,15 +43,15 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Software Developer",
     icon: web,
   },
   {
-    title: "React Developer",
+    title: "Web Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Front-end Developer",
     icon: backend,
   },
   {
@@ -101,18 +101,18 @@ const technologies = [
     name: "Three JS",
     icon: threejs,
   },
-  {
-    name: "git",
-    icon: git,
-  },
+  // {
+  //   name: "git",
+  //   icon: git,
+  // },
   {
     name: "figma",
     icon: figma,
   },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
