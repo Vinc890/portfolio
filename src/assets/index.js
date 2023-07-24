@@ -29,7 +29,8 @@ import tesla from "./company/tesla.png";
 import pharma from "./pharma.png";
 import todo from "./todo.png";
 import vuconnect from "./vuconnect.png";
-import typingame from "./typingame.png"
+import typingame from "./typingame.png";
+import metaverse from "./metaverse.png";
 
 export {
   logo,
@@ -61,4 +62,5 @@ export {
   todo,
   typingame,
   vuconnect,
+  metaverse,
 };

@@ -23,6 +23,7 @@ import {
   todo,
   typingame,
   vuconnect,
+  metaverse,
   threejs,
 } from "../assets";
 
@@ -173,8 +174,29 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Metaverse-Landing-page",
+    description:"The Metaverse Landing Page is a visually captivating and interactive web project that showcases the concept of the metaverse. This immersive landing page serves as an introduction to the exciting world of the metaverse, enticing visitors to explore virtual reality.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "FramerMotion",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: metaverse,
+    clickme: "https://meta-land.netlify.app/",
+    source_code_link: "https://github.com/",
+  },
+  {
     name: "VUConnect",
-    description:"he purpose of VU Connect is to create a vibrant and inclusive social networking platform exclusively for the VU community, including current students, faculty, and alumni.",
+    description:"The purpose of VU Connect is to create a vibrant and inclusive social networking platform exclusively for the VU community, including current students, faculty, and alumni.",
     tags: [
       {
         name: "nextjs",
@@ -216,28 +238,6 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "ToDo-List",
-    description:
-      "I created a To-Do List website using React.js with basic functionalities such as adding, completing, updating, and deleting tasks. The main objective was to create a user-friendly interface with a dark theme that effectively highlights the tasks. The website allows users to easily manage and organize their tasks. ",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: todo,
-    clickme: "https://yourt0d0list.netlify.app/",
-    source_code_link: "https://github.com/",
-  },
-  {
     name: "Typing-Game",
     description:
       "I have developed a typing game using HTML, CSS, and JavaScript. The game includes a timer that starts when the game begins and generates random sentences for typing practice. As players type, the text is dynamically highlighted to indicate the accuracy of their typing. Correctly typed characters are highlighted differently from incorrect ones. This interactive feedback helps players improve their typing skills by providing real-time feedback.",
@@ -257,6 +257,28 @@ const projects = [
     ],
     image: typingame,
     clickme: "https://typiiingame.netlify.app/",
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "ToDo-List",
+    description:
+      "I created a To-Do List website using React.js with basic functionalities such as adding, completing, updating, and deleting tasks. The main objective was to create a user-friendly interface with a dark theme that effectively highlights the tasks. The website allows users to easily manage and organize their tasks. ",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: todo,
+    clickme: "https://yourt0d0list.netlify.app/",
     source_code_link: "https://github.com/",
   },
 ];
