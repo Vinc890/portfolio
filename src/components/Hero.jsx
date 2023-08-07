@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { TbSquareRotatedFilled } from 'react-icons/tb'
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
@@ -25,9 +25,12 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      <ComputersCanvas />
-      <h1 className=" ">Head</h1>
+      <ComputersCanvas className=" max-sm:hidden" />
+      <div className=" w-1/12 m-auto motion-safe:animate-bounce">
+        <h1 className="flex font-bold text-lg font-san text-orange-800 ml-1 motion-safe:animate-pulse"><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/></h1>
+        <h1 className="flex font-bold text-lg font-san text-white motion-safe:animate-pulse">Move Robo</h1>
+        <h1 className="flex font-bold text-lg font-mono text-yellow-800 ml-1 motion-safe:animate-pulse"><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/></h1>
+      </div>
     </section>
   );
 };
