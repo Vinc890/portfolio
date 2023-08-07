@@ -25,8 +25,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas className=" max-sm:hidden" />
-      <div className=" w-1/12 m-auto motion-safe:animate-bounce">
+      <ComputersCanvas />
+      <div className=" w-1/12 m-auto motion-safe:animate-bounce max-sm:hidden">
         <h1 className="flex font-bold text-lg font-san text-orange-800 ml-1 motion-safe:animate-pulse"><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/></h1>
         <h1 className="flex font-bold text-lg font-san text-white motion-safe:animate-pulse">Move Robo</h1>
         <h1 className="flex font-bold text-lg font-mono text-yellow-800 ml-1 motion-safe:animate-pulse"><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/><TbSquareRotatedFilled/></h1>
