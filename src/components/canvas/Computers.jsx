@@ -1,7 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
@@ -21,7 +20,7 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.2 : 2.5}
+        scale={isMobile ? 2 : 2.5}
         position={isMobile ? [0, -3, -0.5] : [5, -3.25, -2.3]}
         rotation={[-0.01, 0.8, -0.1]}
       />
@@ -52,6 +51,7 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+
 
   return (
     <Canvas
