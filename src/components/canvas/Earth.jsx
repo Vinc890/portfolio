@@ -19,7 +19,12 @@ const Earth = () => {
         color="#E2E8F0"
       />
       <pointLight position={[-10, -10, -10]} intensity={2} color="#ffffff" />
-      <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+      <primitive
+        object={earth.scene}
+        scale={2.2}
+        position-y={0}
+        rotation-y={0}
+      />
     </mesh>
   );
 };
@@ -28,7 +33,7 @@ const EarthCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{

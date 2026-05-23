@@ -7,20 +7,14 @@ const Ball = () => {
   return (
     <mesh castShadow receiveShadow scale={2.75}>
       <icosahedronGeometry args={[1, 1]} />
-      <meshBasicMaterial
-        color='#00F0FF'
-        wireframe
-      />
+      <meshBasicMaterial color="#00F0FF" wireframe />
     </mesh>
   );
 };
 
 const BallCanvas = () => {
   return (
-    <Canvas
-      frameloop='demand'
-      dpr={[1, 2]}
-    >
+    <Canvas frameloop="demand" dpr={[1, 2]}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
         <Ball />
