@@ -17,14 +17,14 @@ const ServiceCard = ({ index, title, icon }) => (
   >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.2, 0.65)}
-      className='w-full rounded-2xl border border-white/5 bg-[#121316]/30 hover:bg-[#121316]/65 hover:border-white/15 transition-colors duration-300 p-[1px] shadow-lg shadow-black/30'
+      className='w-full rounded-2xl border border-white/[0.04] bg-white/[0.02] bg-[#0c0c0e]/45 backdrop-blur-[32px] transition-[transform,border-color,background-color] duration-500 ease-out p-[1px] shadow-[0_12px_40px_-5px_rgba(0,0,0,0.4)] hover:border-white/[0.1] hover:bg-white/[0.03]'
     >
       <div className='py-8 px-6 min-h-[280px] flex justify-center items-center flex-col text-center relative select-none'>
         <div className="absolute top-4 right-4 text-secondary/40 font-light text-[11px] tracking-widest">
           0{index + 1}
         </div>
         
-        <div className="p-4 rounded-full border border-white/5 bg-[#080809]/50 mb-6">
+        <div className="p-4 rounded-full border border-white/[0.06] bg-white/[0.005] mb-6">
           <img
             src={icon}
             alt={title}

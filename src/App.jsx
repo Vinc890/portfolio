@@ -9,25 +9,26 @@ const App = () => {
         {/* Full-screen fixed background cinematic 3D canvas */}
         <CinematicCanvas />
         
+        <Navbar />
+        
         {/* Overlay structure */}
         <div className='relative z-10 bg-transparent'>
-          <Navbar />
           <Hero />
         </div>
         
-        <div className='border-b border-white/5 bg-[#0b0b0c]/40 backdrop-blur-sm relative z-10'>
+        <div className='relative z-10 bg-transparent'>
           <About />
         </div>
         
-        <div className='border-b border-white/5 bg-transparent relative z-10'>
+        <div className='relative z-10 bg-transparent'>
           <Experience />
         </div>
         
-        <div className='border-b border-white/5 bg-[#0b0b0c]/40 backdrop-blur-sm relative z-10'>
+        <div className='relative z-10 bg-transparent'>
           <Tech />
         </div>
         
-        <div className='border-b border-white/5 bg-transparent relative z-10'>
+        <div className='relative z-10 bg-transparent'>
           <Works />
         </div>
         
