@@ -8,7 +8,19 @@ const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
 
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <mesh>
+      {/* Dynamic light sources inside the mesh layout */}
+      <ambientLight intensity={0.15} />
+      <spotLight
+        position={[10, 10, 10]}
+        angle={0.2}
+        penumbra={0.8}
+        intensity={2.8}
+        color="#E2E8F0"
+      />
+      <pointLight position={[-10, -10, -10]} intensity={2} color="#ffffff" />
+      <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    </mesh>
   );
 };
 

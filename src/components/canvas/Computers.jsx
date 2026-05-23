@@ -8,20 +8,38 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      {/* Cool, professional titanium ambient light base */}
+      <hemisphereLight intensity={0.2} groundColor='black' color='#E2E8F0' />
+      
+      {/* High-intensity crisp white keylight */}
       <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
+        position={[-15, 35, 15]}
+        angle={0.2}
+        penumbra={0.5}
+        intensity={2.5}
+        color="#FFFFFF"
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={1} />
+      
+      {/* Soft brushed-titanium silver secondary light for metal sheen */}
+      <spotLight
+        position={[25, 20, -10]}
+        angle={0.35}
+        penumbra={0.8}
+        intensity={2.2}
+        color="#94A3B8"
+        castShadow
+        shadow-mapSize={1024}
+      />
+      
+      {/* Subtle cooling point light */}
+      <pointLight intensity={1.2} color="#F8FAFC" position={[0, -1, 3]} />
+      
       <primitive
         object={computer.scene}
-        scale={isMobile ? 2 : 2.5}
-        position={isMobile ? [0, -3, -0.5] : [5, -3.25, -2.3]}
+        scale={isMobile ? 1.9 : 2.5}
+        position={isMobile ? [0, -1.6, 0] : [0, -1.6, 3.5]}
         rotation={[-0.01, 0.8, -0.1]}
       />
     </mesh>
@@ -58,9 +76,9 @@ const ComputersCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [12, 2.2, 5], fov: 18 }}
       gl={{ preserveDrawingBuffer: true }}
-      className=" max-sm:hidden"
+      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

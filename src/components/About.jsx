@@ -7,26 +7,32 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt 
+    options={{
+      max: 25,
+      scale: 1.02,
+      speed: 400,
+    }}
+    className='w-full xs:w-[250px]'
+  >
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full hiblue-loblue-gradient p-[1px] rounded-[20px] shadow-card'
+      variants={fadeIn("right", "spring", index * 0.2, 0.65)}
+      className='w-full rounded-2xl border border-white/5 bg-[#121316]/30 hover:bg-[#121316]/65 hover:border-white/15 transition-colors duration-300 p-[1px] shadow-lg shadow-black/30'
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
+      <div className='py-8 px-6 min-h-[280px] flex justify-center items-center flex-col text-center relative select-none'>
+        <div className="absolute top-4 right-4 text-secondary/40 font-light text-[11px] tracking-widest">
+          0{index + 1}
+        </div>
+        
+        <div className="p-4 rounded-full border border-white/5 bg-[#080809]/50 mb-6">
+          <img
+            src={icon}
+            alt={title}
+            className='w-12 h-12 object-contain filter invert opacity-80'
+          />
+        </div>
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className='text-white text-[16px] font-normal tracking-wide leading-snug'>
           {title}
         </h3>
       </div>
@@ -38,22 +44,18 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>[ INTRODUCTION // CAPABILITIES ]</p>
+        <h2 className={styles.sectionHeadText}>SYSTEM_OVERVIEW.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary text-[15px] max-w-3xl leading-[26px] tracking-wide font-light border-l border-white/10 pl-6'
       >
-        I'm a skilled software developer with experience in HTML, CSS &
-        JavaScript, and expertise in frameworks like React, Nextjs, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I am a dedicated software developer specializing in high-performance full-stack architectures, clean corporate dashboards, and robust generative AI systems. By leveraging optimized interfaces and geometric design structures, I ensure all enterprise platforms deliver exceptional, stable, and highly responsive user experiences.
       </motion.p>
 
-      <div className='mt-20 flex gap-10 max-sm:flex-wrap'>
+      <div className='mt-16 flex flex-wrap gap-8 justify-center'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
