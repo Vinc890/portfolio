@@ -26,14 +26,14 @@ const TechnicalIndicator = () => {
     <group>
       <ambientLight intensity={0.2} />
       <pointLight color="#FFFFFF" intensity={1.5} distance={10} />
-      
+
       {/* High-precision wireframe dodecahedron */}
       <mesh ref={meshRef} scale={1.6}>
         <dodecahedronGeometry args={[1, 0]} />
-        <meshBasicMaterial 
-          color="#94A3B8" 
-          wireframe 
-          transparent 
+        <meshBasicMaterial
+          color="#94A3B8"
+          wireframe
+          transparent
           opacity={0.25}
         />
       </mesh>
@@ -41,30 +41,52 @@ const TechnicalIndicator = () => {
       {/* Orbit Ring */}
       <mesh ref={ringRef}>
         <torusGeometry args={[2.2, 0.008, 4, 48]} />
-        <meshBasicMaterial color="#E2E8F0" transparent opacity={0.4} wireframe />
+        <meshBasicMaterial
+          color="#E2E8F0"
+          transparent
+          opacity={0.4}
+          wireframe
+        />
       </mesh>
     </group>
   );
 };
 
 const Tech = () => {
-  // Professional categorization of technical stack for a Senior Developer
   const categorizedSkills = [
     {
       category: "Frontend Architecture & Interfaces",
-      description: "Building scalable, high-performance web products, interactive user environments, and pre-rendered next-gen applications.",
-      skills: ["React JS", "Next JS", "Tailwind CSS", "Three JS"]
+      description:
+        "Building scalable, high-performance web products, interactive user environments, and pre-rendered next-gen applications.",
+      skills: [
+        "React JS",
+        "Next JS",
+        "Tailwind CSS",
+        "Three JS",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Figma",
+      ],
     },
     {
       category: "Backend Infrastructure & Databases",
-      description: "Architecting secure RESTful endpoints, real-time relational structures, and multi-tenant database systems.",
-      skills: ["Node JS", "SQL", "MongoDB", "Firebase"]
+      description:
+        "Architecting secure RESTful endpoints, real-time relational structures, and multi-tenant database systems.",
+      skills: ["Node JS", "SQL", "MongoDB", "Firebase", "CMS"],
     },
     {
-      category: "Artificial Intelligence & Automation",
-      description: "Engineering candidate roleplay simulators, voice/video agents, structured JSON schema validations, and advanced prompt systems.",
-      skills: ["Generative AI APIs", "Prompt Engineering"]
-    }
+      category: "Artificial Intelligence, Automation and Tools",
+      description:
+        "Engineering candidate roleplay simulators, voice/video agents, structured JSON schema validations, and advanced prompt systems.",
+      skills: [
+        "Git",
+        "GCP",
+        "Generative AI APIs",
+        "Prompt Engineering",
+        "AI Integrated IDEs",
+      ],
+    },
   ];
 
   return (
@@ -76,7 +98,6 @@ const Tech = () => {
       </div>
 
       <div className="w-full flex flex-col lg:flex-row items-stretch gap-10">
-        
         {/* Left Column: Categorized Senior Engineering Dashboard */}
         <div className="flex-[1.8] flex flex-col gap-6">
           {categorizedSkills.map((cat, catIndex) => (
@@ -144,7 +165,6 @@ const Tech = () => {
             <span>v4.0.2</span>
           </div>
         </div>
-
       </div>
     </div>
   );
