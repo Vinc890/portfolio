@@ -1,7 +1,6 @@
 export const navLinks = [
   { id: "about", title: "About" },
-  { id: "experience", title: "Experience" },
-  { id: "projects", title: "Work" },
+  { id: "work", title: "Work" },
   { id: "contact", title: "Contact" },
 ];
 
@@ -79,7 +78,7 @@ export const experiences = [
   },
 ];
 
-import { pharma, vuconnect, metaverse, typingame } from "../assets";
+import { pharma, vuconnect, metaverse, typingame, citizen } from "../assets";
 
 export const projects = [
   {
@@ -87,10 +86,8 @@ export const projects = [
     description:
       "A modern web platform designed to streamline the submission and tracking of civic issues, featuring an intuitive UI and efficient routing of user reports.",
     tags: [{ name: "nextjs" }, { name: "fullstack" }, { name: "modern-ui" }],
-    image: pharma,
+    image: citizen,
     link: "https://citizen-grievance-portal-vincent.vercel.app/en",
-    source_code_link:
-      "https://github.com/vincentvarghese01/citizen-grievance-portal",
   },
   {
     name: "VU Connect",
@@ -99,7 +96,6 @@ export const projects = [
     tags: [{ name: "react" }, { name: "firebase" }, { name: "tailwindcss" }],
     image: vuconnect,
     link: "https://github.com/vincentvarghese01",
-    source_code_link: "https://github.com/vincentvarghese01/vu-connect",
   },
   {
     name: "The Metaverse Landing Page",
@@ -108,8 +104,6 @@ export const projects = [
     tags: [{ name: "react" }, { name: "css-animations" }, { name: "ui-ux" }],
     image: metaverse,
     link: "https://meta-land.netlify.app/",
-    source_code_link:
-      "https://github.com/vincentvarghese01/metaverse-landing-page",
   },
   {
     name: "Typing Game",
@@ -117,8 +111,15 @@ export const projects = [
       "An interactive typing game featuring random sentence generation and a built-in timer. Implemented real-time feedback by highlighting correct and incorrect characters dynamically to improve typing speed.",
     tags: [{ name: "vanilla-js" }, { name: "html" }, { name: "css" }],
     image: typingame,
-    link: "https://typiingame.netlify.app/",
-    source_code_link: "https://github.com/vincentvarghese01/typing-game",
+    link: "https://typiiingame.netlify.app/",
+  },
+  {
+    name: "Basic Website Template",
+    description:
+      "A basic website template for businesses and organizations. Build as part of internship program",
+    tags: [{ name: "html" }, { name: "css" }],
+    image: pharma,
+    link: "https://virtue-pharma.netlify.app/",
   },
 ];
 

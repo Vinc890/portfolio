@@ -31,6 +31,7 @@ import todo from "./todo.png";
 import vuconnect from "./vuconnect.png";
 import typingame from "./typingame.png";
 import metaverse from "./metaverse.png";
+import citizen from "./citizen-portal.png";
 
 export {
   logo,
@@ -63,4 +64,5 @@ export {
   typingame,
   vuconnect,
   metaverse,
+  citizen,
 };

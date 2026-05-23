@@ -133,16 +133,8 @@ const Tech = () => {
           ))}
         </div>
 
-        {/* Right Column: Subtle, Distinctive 3D Technical Indicator */}
         <div className="flex-[0.8] rounded-3xl border border-white/5 bg-[#121316]/10 backdrop-blur-xl relative flex flex-col shadow-xl overflow-hidden select-none min-h-[300px]">
-          {/* Header Panel */}
-          <div className="border-b border-white/5 px-6 py-4 flex justify-between items-center text-[10px] font-medium tracking-widest text-secondary/60 bg-[#121316]/30">
-            <span>[ SYSTEM_ACCELERATOR_STATUS ]</span>
-            <span className="flex items-center gap-1.5 text-secondary/80">
-              <span className="w-1.5 h-1.5 bg-white/20 rounded-full animate-pulse" />
-              ONLINE
-            </span>
-          </div>
+          <div className="border-b border-white/5 px-6 py-4 flex justify-between items-center text-[10px] font-medium tracking-widest text-secondary/60 bg-[#121316]/30" />
 
           {/* Canvas Viewport */}
           <div className="flex-1 w-full relative bg-[#080809]/20">
@@ -159,11 +151,7 @@ const Tech = () => {
             </Canvas>
           </div>
 
-          {/* Footer Coordinates */}
-          <div className="border-t border-white/5 px-6 py-3.5 flex justify-between items-center text-[10px] font-light tracking-wide text-secondary/40 bg-black/5">
-            <span>CORES: ALL_SYSTEMS_OPERATIONAL</span>
-            <span>v4.0.2</span>
-          </div>
+          <div className="border-t border-white/5 px-6 py-3.5 flex justify-between items-center text-[10px] font-light tracking-wide text-secondary/40 bg-black/5" />
         </div>
       </div>
     </div>
