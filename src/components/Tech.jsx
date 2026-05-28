@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from "react";
+import { Suspense, useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload } from "@react-three/drei";
 import { SectionWrapper } from "../hoc";
@@ -53,6 +53,22 @@ const TechnicalIndicator = () => {
 };
 
 const Tech = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   const categorizedSkills = [
     {
       category: "Frontend Architecture & Interfaces",
@@ -133,13 +149,13 @@ const Tech = () => {
           ))}
         </div>
 
-        <div className="flex-[0.8] rounded-3xl border border-white/5 bg-[#121316]/10 backdrop-blur-xl relative flex flex-col shadow-xl overflow-hidden select-none min-h-[300px]">
+        <div className="flex-[0.8] rounded-3xl border border-white/5 bg-[#121316]/10 backdrop-blur-xl relative flex flex-col shadow-xl overflow-hidden select-none h-[380px] sm:h-[450px] lg:h-auto">
           <div className="border-b border-white/5 px-6 py-4 flex justify-between items-center text-[10px] font-medium tracking-widest text-secondary/60 bg-[#121316]/30" />
 
           {/* Canvas Viewport */}
           <div className="flex-1 w-full relative bg-[#080809]/20">
             <Canvas
-              camera={{ position: [0, 0, 5.5], fof: 45 }}
+              camera={{ position: [0, 0, isMobile ? 8 : 5.5], fov: 45 }}
               dpr={[1, 2]}
               gl={{ antialias: true }}
             >
