@@ -32,6 +32,7 @@ import vuconnect from "./vuconnect.png";
 import typingame from "./typingame.png";
 import metaverse from "./metaverse.png";
 import citizen from "./citizen-portal.png";
+import feedback_portal from "./feedback-portal.png"
 
 export {
   logo,
@@ -65,4 +66,5 @@ export {
   vuconnect,
   metaverse,
   citizen,
+  feedback_portal
 };

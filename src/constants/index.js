@@ -78,9 +78,17 @@ export const experiences = [
   },
 ];
 
-import { pharma, vuconnect, metaverse, typingame, citizen } from "../assets";
+import { pharma, vuconnect, metaverse, typingame, citizen, feedback_portal } from "../assets";
 
 export const projects = [
+  {
+    name: "FlowSync",
+    description:
+      "A zero-friction client feedback portal and real-time Kanban workspace built for independent professionals.",
+    tags: [{ name: "nextjs" }, { name: "WebSockets" }, { name: "Redis" }, { name: "fullstack" }, { name: "modern-ui" }],
+    image: feedback_portal,
+    link: "https://feedback-portal-vincent.vercel.app",
+  },
   {
     name: "Citizen Grievance Portal",
     description:
