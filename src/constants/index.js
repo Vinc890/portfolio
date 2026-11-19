@@ -87,7 +87,7 @@ export const experiences = [
   {
     title: "Senior Software Developer",
     company_name: "BlitzCode Systems",
-    date: "Nov 2026 - Present",
+    date: "Oct 2026 - Present",
     points: [
       "Own the frontend and AI features on client projects, from the first conversation with the client through to release.",
       "Still look after the voice-agent platform, which two enterprise clients have since signed on to use.",
@@ -96,7 +96,7 @@ export const experiences = [
   {
     title: "Full Stack Engineer",
     company_name: "BlitzCode Systems",
-    date: "Sep 2023 - Oct 2026",
+    date: "Sep 2023 - Sep 2026",
     points: [
       "Built the web app for an AI roleplay platform, where voice agents run practice calls with candidates and their performance is assessed afterwards.",
       "Connected the app to a voice AI service for live calls, and let admins create and set up new agents from the dashboard.",
