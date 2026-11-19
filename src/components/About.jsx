@@ -54,13 +54,12 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[15px] max-w-3xl leading-[26px] tracking-wide font-light border-l border-white/10 pl-6"
       >
-        I'm a senior software developer at a small product studio, where I've
-        taken products from the first client call to production. Recently I've
-        been building AI voice-agent products: live voice and video sessions
-        with AI personas, media pipelines on GCP, and LLM-based evaluation.
-        Before that, I built a schema-driven form engine for ESG compliance
-        reporting and offline-first tools for teams working without
-        connectivity.
+        I've spent the last three years at a small product studio, where I
+        usually get involved early: talking to the client, planning the build
+        with our founder, then writing most of the frontend myself. I've worked
+        on a training platform that uses AI voice agents, a reporting tool for
+        ESG compliance, and an app for field teams who often work without
+        internet.
       </motion.p>
 
       <div className="mt-16 flex flex-wrap gap-8 justify-center">

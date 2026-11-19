@@ -73,45 +73,20 @@ const Tech = () => {
     {
       category: "Frontend",
       description:
-        "Production web apps in React and Next.js, from schema-driven forms and complex tables to live media sessions and interactive 3D.",
-      skills: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "Tailwind CSS",
-        "Three.js",
-        "HTML/CSS",
-        "Figma",
-      ],
+        "Most of my work. I'm comfortable with complex forms, dashboards and real-time screens.",
+      skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Three.js", "HTML/CSS", "Figma"],
     },
     {
       category: "Backend & Data",
       description:
-        "REST APIs, real-time features and the databases behind them.",
-      skills: [
-        "Node.js",
-        "Express",
-        "REST APIs",
-        "WebSockets",
-        "PostgreSQL",
-        "MongoDB",
-        "Firebase",
-        "Supabase",
-      ],
+        "Enough to build and run the APIs and databases my frontends need.",
+      skills: ["Node.js", "Express", "REST APIs", "WebSockets", "PostgreSQL", "MongoDB", "Firebase", "Supabase"],
     },
     {
       category: "AI & Cloud",
       description:
-        "Voice agents, LLM integration and the cloud functions that connect them to the product.",
-      skills: [
-        "LLM APIs (Claude, Gemini, OpenAI)",
-        "ElevenLabs Voice Agents",
-        "Prompt Engineering",
-        "GCP Cloud Functions",
-        "Cloud Storage",
-        "Git",
-      ],
+        "Voice agents, LLM APIs and the cloud functions that connect them to an app.",
+      skills: ["LLM APIs", "Voice AI", "Prompt design", "Google Cloud", "Git"],
     },
   ];
 

@@ -37,8 +37,8 @@ const Hero = () => {
             </p>
 
             <p className="text-secondary text-[15px] sm:text-[17px] leading-relaxed tracking-wide max-w-lg mb-10 font-light">
-              I build full-stack products for real clients, from the first call
-              to production. Most recently: AI voice-agent platforms.
+              I work at a small product studio, building web apps for clients.
+              Lately, a lot of that work has been AI voice agents.
             </p>
 
             <div className="flex flex-wrap gap-4 items-center">

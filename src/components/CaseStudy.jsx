@@ -54,8 +54,8 @@ const CaseStudy = () => {
         <p className="mt-4 pl-6 text-white/90 text-[14px] tracking-wide font-light">
           {caseStudy.outcome}
         </p>
-        <p className="mt-2 pl-6 text-secondary/60 text-[11px] tracking-[0.15em] uppercase">
-          Work project &middot; details anonymised &middot; no client code or screenshots
+        <p className="mt-2 pl-6 text-secondary/60 text-[12px] tracking-wide italic">
+          {caseStudy.note}
         </p>
       </motion.div>
 
@@ -71,7 +71,7 @@ const CaseStudy = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-white" /> Built by me
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/25" /> Third party / partner team
+              <span className="w-1.5 h-1.5 rounded-full bg-white/25" /> Third-party service or partner team
             </span>
           </div>
         </div>

@@ -1,5 +1,5 @@
-// Set to false to hide the voice-agent case study (e.g. if your employer
-// prefers you don't describe it). The nav link hides with it.
+// Set to false to hide the case study (e.g. until your employer is happy
+// for you to describe it). The nav link hides with it.
 export const showCaseStudy = true;
 
 export const navLinks = [
@@ -9,77 +9,60 @@ export const navLinks = [
   { id: "contact", title: "Contact" },
 ];
 
-// Work project: anonymised, no client code, screenshots or names.
+// Work project: no client names, code, screenshots or vendor names.
 export const caseStudy = {
   title: "AI Voice-Agent Roleplay Platform",
   context:
-    "An HR-tech platform where AI voice and video agents run live roleplay simulations, such as customer-service calls, to coach and assess candidates. I built the web app and the media pipeline; a partner team built the evaluation backend.",
+    "A platform where people practise difficult calls, like handling an upset customer, with an AI voice agent, then get a report on how they did. I built the web app and the pipeline that records each session. A partner team built the part that scores it.",
   outcome:
-    "Now contracted by a large Indian BPO and a Singapore-based insurance training institute.",
+    "Two enterprise clients have since signed on: a large Indian BPO and an insurance training institute in Singapore.",
+  note: "A work project. I've left out client names, code and screenshots.",
   flow: [
     {
-      stage: "During the session",
+      stage: "During the call",
       nodes: [
-        { name: "ElevenLabs voice agent", detail: "Real-time voice conversation via the Conversational AI SDK", mine: false },
-        { name: "React web app", detail: "Live session UI, admin dashboard, agent setup", mine: true, link: "both" },
-        { name: "Cloud Storage", detail: "Candidate video uploaded in chunks as the session runs", mine: true },
+        { name: "Voice agent", detail: "A third-party voice AI service that runs the conversation", mine: false },
+        { name: "Web app", detail: "The call screen, admin dashboard and agent setup", mine: true, link: "both" },
+        { name: "Cloud storage", detail: "The candidate's video, uploaded in small pieces during the call", mine: true },
       ],
     },
     {
-      stage: "After the session",
+      stage: "After the call",
       nodes: [
-        { name: "GCP Cloud Function", detail: "Fetches agent audio and stitches it with the video chunks", mine: true },
-        { name: "Final recording", detail: "One complete session file, back in Cloud Storage", mine: true },
-        { name: "LLM evaluation", detail: "Partner backend scores the session into a structured report", mine: false },
+        { name: "Cloud function", detail: "Pulls the agent's audio and joins it with the video", mine: true },
+        { name: "Session recording", detail: "One complete file for each session", mine: true },
+        { name: "Evaluation", detail: "The partner team's backend turns it into a report", mine: false },
       ],
     },
   ],
   problems: [
     {
-      title: "One recording from two sources",
-      text: "The candidate's video was captured in the browser, but the agent's voice lived on ElevenLabs. Uploading the video in chunks during the call and merging everything in a Cloud Function afterwards gave the evaluator one complete recording.",
+      title: "Two halves of one recording",
+      text: "The candidate's video was recorded in the browser, but the agent's voice lived with the voice service. I uploaded the video in pieces during the call and joined everything up in a cloud function afterwards, so the evaluation had one complete recording to work with.",
     },
     {
-      title: "Agents configured from the dashboard",
-      text: "Admins define the persona, the scenario and the report parameters in the UI, and the app creates and updates the matching ElevenLabs agent through its API, so new roleplays need no code.",
+      title: "New scenarios without new code",
+      text: "Admins set up the persona, the scenario and what the report should look at from the dashboard. The app then creates or updates the agent through the voice service's API.",
     },
     {
-      title: "Personas that stay in character",
-      text: "Each agent gets a role-specific knowledge base and system prompt, refined over repeated test sessions until it holds the scenario consistently.",
+      title: "Keeping agents in character",
+      text: "Each agent has its own prompt and background notes. I tuned them over a lot of test calls until they stopped drifting off script.",
     },
     {
-      title: "Shipping alongside other teams",
-      text: "Feature APIs were agreed with the partner backend team, and successive redesigns from external UI/UX agencies were rolled into the live product.",
+      title: "Working across teams",
+      text: "The scoring backend belonged to a partner team and the designs came from outside agencies, so a good part of the job was agreeing APIs and fitting redesigns into a product people were already using.",
     },
   ],
-  stack: [
-    "React",
-    "ElevenLabs Conversational AI",
-    "GCP Cloud Functions",
-    "Cloud Storage",
-    "LLM APIs",
-  ],
+  stack: ["React", "Voice AI", "Serverless functions", "Cloud storage", "LLM APIs"],
 };
 
 import { web, mobile, backend, creator } from "../assets";
 
 export const services = [
-  {
-    title: "Full-Stack Development",
-    icon: web,
-  },
-  {
-    title: "AI & LLM Integration",
-    icon: backend,
-  },
-  {
-    title: "Voice Agents & Media Pipelines",
-    icon: mobile,
-  },
-  {
-    title: "Client-Facing Delivery",
-    icon: creator,
-  },
+  { title: "Web Apps", icon: web },
+  { title: "AI Features", icon: backend },
+  { title: "Voice Agents", icon: mobile },
+  { title: "Working with Clients", icon: creator },
 ];
 
 export const technologies = [
@@ -93,9 +76,8 @@ export const technologies = [
   { name: "MongoDB" },
   { name: "Firebase" },
   { name: "Supabase" },
-  { name: "GCP" },
+  { name: "Google Cloud" },
   { name: "LLM APIs" },
-  { name: "Prompt Engineering" },
   { name: "Three.js" },
   { name: "Tailwind CSS" },
   { name: "Figma" },
@@ -107,8 +89,8 @@ export const experiences = [
     company_name: "BlitzCode Systems",
     date: "Nov 2026 - Present",
     points: [
-      "Own frontend architecture and AI integrations for client products, from requirements with clients through to delivery, working closely with the founder and partner backend teams.",
-      "Continue to own the frontend and media pipeline of the AI voice-agent roleplay platform, now contracted by an Indian BPO and a Singapore insurance training institute.",
+      "Own the frontend and AI features on client projects, from the first conversation with the client through to release.",
+      "Still look after the voice-agent platform, which two enterprise clients have since signed on to use.",
     ],
   },
   {
@@ -116,14 +98,14 @@ export const experiences = [
     company_name: "BlitzCode Systems",
     date: "Sep 2023 - Oct 2026",
     points: [
-      "AI voice-agent roleplay platform (HR-tech): built the full web frontend from scratch, covering live roleplay sessions, the admin dashboard and agent setup, integrating APIs from a partner backend team.",
-      "Integrated the ElevenLabs SDK for live voice and video sessions, and built flows that create and configure agents through its API.",
-      "Built a GCP Cloud Function that stitches chunked session video from Cloud Storage with agent audio into one recording, which feeds an LLM-based evaluation pipeline.",
-      "Designed agent personas through system prompts and role-specific knowledge bases, refined across repeated test sessions.",
-      "Built the frontend for the platform's earlier manual version: admin question banks, multi-step assessment wizards and reviewer workflows.",
-      "ESG compliance (BRSR) reporting tool: built a schema-driven form engine with an admin builder UI and complex tables (multi-level headers, merged cells, locked values), split across departments and merged into one final report.",
-      "Offline-first field registration app: built on-device storage with sync to the central database when connectivity returns.",
-      "Also added features to a parent-engagement mobile app for a European client and rebuilt the company website in Next.js.",
+      "Built the web app for an AI roleplay platform, where voice agents run practice calls with candidates and their performance is assessed afterwards.",
+      "Connected the app to a voice AI service for live calls, and let admins create and set up new agents from the dashboard.",
+      "Wrote the cloud function that joins each session's video with the agent's audio into one recording for the evaluation step.",
+      "Wrote the prompts and background material behind each agent, and tuned them over many test calls.",
+      "Built the earlier, manual version of the platform: question banks, multi-step tests and screens for human reviewers.",
+      "Built a form engine for ESG compliance reports. Admins design the forms, including tables with merged cells and nested headers, and each department fills in its own part before everything is merged into one report.",
+      "Added offline saving to a registration app used in areas with poor connectivity, so records sync once the device is back online.",
+      "Also worked on a parent app for a school-services client in Europe, and rebuilt our company website.",
     ],
   },
   {
@@ -131,17 +113,15 @@ export const experiences = [
     company_name: "BlitzCode Systems",
     date: "Jan 2023 - Jun 2023",
     points: [
-      "Migrated a client web app from React to Next.js, using pre-rendering for better SEO and load times.",
-      "Refreshed the UI for a cleaner, faster experience.",
+      "Moved a client's React site to Next.js so its pages could be pre-rendered for better SEO.",
+      "Cleaned up the UI along the way.",
     ],
   },
   {
     title: "Web Developer Intern",
     company_name: "Exposys Data Labs",
     date: "Jul 2022 - Aug 2022",
-    points: [
-      "Built and deployed a responsive multi-page website with HTML, CSS and JavaScript on Vercel and Netlify.",
-    ],
+    points: ["Built and deployed a multi-page website during a short internship."],
   },
 ];
 
@@ -151,7 +131,7 @@ export const projects = [
   {
     name: "FlowSync",
     description:
-      "A real-time Kanban workspace and client feedback portal for freelancers. Clients submit feedback through a private link with no sign-up, and tasks sync instantly as they move across the board.",
+      "A Kanban board for freelancers. Clients send feedback through a private link without needing an account, and changes show up for everyone straight away.",
     tags: [{ name: "nextjs" }, { name: "websockets" }, { name: "redis" }],
     image: feedback_portal,
     link: "https://feedback-portal-vincent.vercel.app",
@@ -159,7 +139,7 @@ export const projects = [
   {
     name: "Citizen Grievance Portal",
     description:
-      "A civic grievance platform with citizen, department and admin roles. Complaints route to the right department, with speech-to-text, multilingual input and a CMS-style admin panel for homepage content.",
+      "A place for citizens to report civic issues and follow them up. Complaints go to the right department, and people can type or speak in their own language.",
     tags: [{ name: "nextjs" }, { name: "supabase" }, { name: "i18n" }],
     image: citizen,
     link: "https://citizen-grievance-portal-vincent.vercel.app/en",
