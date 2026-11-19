@@ -125,10 +125,8 @@ const Works = () => {
         className="w-full flex"
       >
         <p className="mt-6 text-secondary text-[15px] max-w-3xl leading-[26px] tracking-wide font-light border-l border-white/10 pl-6">
-          The following projects demonstrate my technological proficiency. Each
-          panel represents a deployed module constructed under modular clean
-          standards of development for development and maintenance. Click live
-          links to inspect active builds.
+          Personal projects I designed and built end to end, each with a live
+          demo and source code.
         </p>
       </motion.div>
 

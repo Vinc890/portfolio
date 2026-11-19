@@ -45,7 +45,7 @@ const Navbar = () => {
           <img src={logo} alt='logo' className='w-6 h-6 object-contain filter invert opacity-90' />
           <p className='text-white text-[15px] font-normal tracking-wide cursor-pointer flex items-center'>
             Vincent &nbsp;
-            <span className='text-secondary font-light text-[13px]'> | Developer </span>
+            <span className='hidden xs:inline text-secondary font-light text-[13px]'> | Senior Software Developer </span>
           </p>
         </Link>
 

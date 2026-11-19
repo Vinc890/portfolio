@@ -71,36 +71,46 @@ const Tech = () => {
 
   const categorizedSkills = [
     {
-      category: "Frontend Architecture & Interfaces",
+      category: "Frontend",
       description:
-        "Building scalable, high-performance web products, interactive user environments, and pre-rendered next-gen applications.",
+        "Production web apps in React and Next.js, from schema-driven forms and complex tables to live media sessions and interactive 3D.",
       skills: [
-        "React JS",
-        "Next JS",
-        "Tailwind CSS",
-        "Three JS",
-        "HTML",
-        "CSS",
+        "React",
+        "Next.js",
+        "TypeScript",
         "JavaScript",
+        "Tailwind CSS",
+        "Three.js",
+        "HTML/CSS",
         "Figma",
       ],
     },
     {
-      category: "Backend Infrastructure & Databases",
+      category: "Backend & Data",
       description:
-        "Architecting secure RESTful endpoints, real-time relational structures, and multi-tenant database systems.",
-      skills: ["Node JS", "SQL", "MongoDB", "Firebase", "CMS"],
+        "REST APIs, real-time features and the databases behind them.",
+      skills: [
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "WebSockets",
+        "PostgreSQL",
+        "MongoDB",
+        "Firebase",
+        "Supabase",
+      ],
     },
     {
-      category: "Artificial Intelligence, Automation and Tools",
+      category: "AI & Cloud",
       description:
-        "Engineering candidate roleplay simulators, voice/video agents, structured JSON schema validations, and advanced prompt systems.",
+        "Voice agents, LLM integration and the cloud functions that connect them to the product.",
       skills: [
-        "Git",
-        "GCP",
-        "Generative AI APIs",
+        "LLM APIs (Claude, Gemini, OpenAI)",
+        "ElevenLabs Voice Agents",
         "Prompt Engineering",
-        "AI Integrated IDEs",
+        "GCP Cloud Functions",
+        "Cloud Storage",
+        "Git",
       ],
     },
   ];

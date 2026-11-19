@@ -32,10 +32,13 @@ const Hero = () => {
 
             <div className="w-20 h-[1px] bg-white/20 mb-8" />
 
+            <p className="text-white/90 text-[18px] sm:text-[21px] font-normal tracking-wide mb-4">
+              Senior Software Developer
+            </p>
+
             <p className="text-secondary text-[15px] sm:text-[17px] leading-relaxed tracking-wide max-w-lg mb-10 font-light">
-              Architecting premium full-stack structures, intuitive enterprise
-              workflows, and custom artificial intelligence layers that scale
-              corporate digital landscapes.
+              I build full-stack products for real clients, from the first call
+              to production. Most recently: AI voice-agent platforms.
             </p>
 
             <div className="flex flex-wrap gap-4 items-center">
@@ -65,7 +68,7 @@ const Hero = () => {
       </div>
 
       <div className="w-full border-t border-white/[0.04] bg-white/[0.005] py-5 flex justify-center items-center text-[10px] font-semibold tracking-[0.4em] text-secondary/40 select-none z-10">
-        <span>ESTABLISHED 2020</span>
+        <span>BUILDING SINCE 2022</span>
       </div>
     </section>
   );

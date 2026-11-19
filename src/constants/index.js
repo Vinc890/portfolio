@@ -1,8 +1,65 @@
+// Set to false to hide the voice-agent case study (e.g. if your employer
+// prefers you don't describe it). The nav link hides with it.
+export const showCaseStudy = true;
+
 export const navLinks = [
   { id: "about", title: "About" },
   { id: "work", title: "Work" },
+  ...(showCaseStudy ? [{ id: "case-study", title: "Case Study" }] : []),
   { id: "contact", title: "Contact" },
 ];
+
+// Work project: anonymised, no client code, screenshots or names.
+export const caseStudy = {
+  title: "AI Voice-Agent Roleplay Platform",
+  context:
+    "An HR-tech platform where AI voice and video agents run live roleplay simulations, such as customer-service calls, to coach and assess candidates. I built the web app and the media pipeline; a partner team built the evaluation backend.",
+  outcome:
+    "Now contracted by a large Indian BPO and a Singapore-based insurance training institute.",
+  flow: [
+    {
+      stage: "During the session",
+      nodes: [
+        { name: "ElevenLabs voice agent", detail: "Real-time voice conversation via the Conversational AI SDK", mine: false },
+        { name: "React web app", detail: "Live session UI, admin dashboard, agent setup", mine: true, link: "both" },
+        { name: "Cloud Storage", detail: "Candidate video uploaded in chunks as the session runs", mine: true },
+      ],
+    },
+    {
+      stage: "After the session",
+      nodes: [
+        { name: "GCP Cloud Function", detail: "Fetches agent audio and stitches it with the video chunks", mine: true },
+        { name: "Final recording", detail: "One complete session file, back in Cloud Storage", mine: true },
+        { name: "LLM evaluation", detail: "Partner backend scores the session into a structured report", mine: false },
+      ],
+    },
+  ],
+  problems: [
+    {
+      title: "One recording from two sources",
+      text: "The candidate's video was captured in the browser, but the agent's voice lived on ElevenLabs. Uploading the video in chunks during the call and merging everything in a Cloud Function afterwards gave the evaluator one complete recording.",
+    },
+    {
+      title: "Agents configured from the dashboard",
+      text: "Admins define the persona, the scenario and the report parameters in the UI, and the app creates and updates the matching ElevenLabs agent through its API, so new roleplays need no code.",
+    },
+    {
+      title: "Personas that stay in character",
+      text: "Each agent gets a role-specific knowledge base and system prompt, refined over repeated test sessions until it holds the scenario consistently.",
+    },
+    {
+      title: "Shipping alongside other teams",
+      text: "Feature APIs were agreed with the partner backend team, and successive redesigns from external UI/UX agencies were rolled into the live product.",
+    },
+  ],
+  stack: [
+    "React",
+    "ElevenLabs Conversational AI",
+    "GCP Cloud Functions",
+    "Cloud Storage",
+    "LLM APIs",
+  ],
+};
 
 import { web, mobile, backend, creator } from "../assets";
 
@@ -12,50 +69,61 @@ export const services = [
     icon: web,
   },
   {
-    title: "Mobile App Engineering",
-    icon: mobile,
-  },
-  {
-    title: "AI Integration & APIs",
+    title: "AI & LLM Integration",
     icon: backend,
   },
   {
-    title: "Enterprise Systems",
+    title: "Voice Agents & Media Pipelines",
+    icon: mobile,
+  },
+  {
+    title: "Client-Facing Delivery",
     icon: creator,
   },
 ];
 
 export const technologies = [
-  { name: "HTML" },
-  { name: "CSS" },
+  { name: "React" },
+  { name: "Next.js" },
+  { name: "TypeScript" },
   { name: "JavaScript" },
-  { name: "React JS" },
-  { name: "Next JS" },
-  { name: "Generative AI APIs" },
-  { name: "Prompt Engineering" },
-  { name: "Three JS" },
-  { name: "Node JS" },
+  { name: "Node.js" },
+  { name: "Express" },
+  { name: "PostgreSQL" },
   { name: "MongoDB" },
   { name: "Firebase" },
-  { name: "SQL" },
+  { name: "Supabase" },
+  { name: "GCP" },
+  { name: "LLM APIs" },
+  { name: "Prompt Engineering" },
+  { name: "Three.js" },
   { name: "Tailwind CSS" },
-  { name: "Git" },
-  { name: "AI Integrated IDEs" },
   { name: "Figma" },
 ];
 
 export const experiences = [
   {
+    title: "Senior Software Developer",
+    company_name: "BlitzCode Systems",
+    date: "Nov 2026 - Present",
+    points: [
+      "Own frontend architecture and AI integrations for client products, from requirements with clients through to delivery, working closely with the founder and partner backend teams.",
+      "Continue to own the frontend and media pipeline of the AI voice-agent roleplay platform, now contracted by an Indian BPO and a Singapore insurance training institute.",
+    ],
+  },
+  {
     title: "Full Stack Engineer",
     company_name: "BlitzCode Systems",
-    date: "Sept 2023 - Present",
+    date: "Sep 2023 - Oct 2026",
     points: [
-      "Built an AI Avatar-powered roleplay platform featuring Voice and Video Agents that conduct and record live candidate simulations where AI personas coach and assess candidates via simulated utility and customer interactions, then session video and audio are analyzed against dynamic report parameters to generate structured performance evaluations — replacing manual assessment entirely.",
-      "Developed a web app for employee assessments, streamlining promotions and recruitment processes. This tool Is focused on enhancing efficiency in evaluating skills and performance.",
-      "Built a mobile app for parents, enhancing parent’s engagement with school events and services. The app facilitated ordering of canteen food, uniforms, and stationery. Scheduling volunteering events and managing school calendar and payments.",
-      "Created a BRSR (Business Responsibility & Sustainability Reporting) compliance web app, automating report creation by segmenting and assigning by departments and compiling inputs to generate the final draft. This innovative tool simplified the reporting process significantly.",
-      "Designed the BlitzCode website, establishing a key online presence for company information. The site serves as a comprehensive resource for products and services.",
-      "Developed an event booking site, simplifying planning with venue and service reservations. This platform provided a seamless user experience for event organizers.",
+      "AI voice-agent roleplay platform (HR-tech): built the full web frontend from scratch, covering live roleplay sessions, the admin dashboard and agent setup, integrating APIs from a partner backend team.",
+      "Integrated the ElevenLabs SDK for live voice and video sessions, and built flows that create and configure agents through its API.",
+      "Built a GCP Cloud Function that stitches chunked session video from Cloud Storage with agent audio into one recording, which feeds an LLM-based evaluation pipeline.",
+      "Designed agent personas through system prompts and role-specific knowledge bases, refined across repeated test sessions.",
+      "Built the frontend for the platform's earlier manual version: admin question banks, multi-step assessment wizards and reviewer workflows.",
+      "ESG compliance (BRSR) reporting tool: built a schema-driven form engine with an admin builder UI and complex tables (multi-level headers, merged cells, locked values), split across departments and merged into one final report.",
+      "Offline-first field registration app: built on-device storage with sync to the central database when connectivity returns.",
+      "Also added features to a parent-engagement mobile app for a European client and rebuilt the company website in Next.js.",
     ],
   },
   {
@@ -63,8 +131,8 @@ export const experiences = [
     company_name: "BlitzCode Systems",
     date: "Jan 2023 - Jun 2023",
     points: [
-      "Migrated a website from ReactJS to Next JS, leveraging pre-rendering capabilities to boost SEO performance.",
-      "Enhanced the user interface for a modern, streamlined experience, leading to significantly faster load times.",
+      "Migrated a client web app from React to Next.js, using pre-rendering for better SEO and load times.",
+      "Refreshed the UI for a cleaner, faster experience.",
     ],
   },
   {
@@ -72,62 +140,29 @@ export const experiences = [
     company_name: "Exposys Data Labs",
     date: "Jul 2022 - Aug 2022",
     points: [
-      "Developed a responsive multi-page website, emphasizing modern aesthetics and intuitive functionality.",
-      "Successfully deployed the website on free hosting platforms Vercel and Netlify, ensuring accessible and scalable performance.",
+      "Built and deployed a responsive multi-page website with HTML, CSS and JavaScript on Vercel and Netlify.",
     ],
   },
 ];
 
-import { pharma, vuconnect, metaverse, typingame, citizen, feedback_portal } from "../assets";
+import { citizen, feedback_portal } from "../assets";
 
 export const projects = [
   {
     name: "FlowSync",
     description:
-      "A zero-friction client feedback portal and real-time Kanban workspace built for independent professionals.",
-    tags: [{ name: "nextjs" }, { name: "WebSockets" }, { name: "Redis" }, { name: "fullstack" }, { name: "modern-ui" }],
+      "A real-time Kanban workspace and client feedback portal for freelancers. Clients submit feedback through a private link with no sign-up, and tasks sync instantly as they move across the board.",
+    tags: [{ name: "nextjs" }, { name: "websockets" }, { name: "redis" }],
     image: feedback_portal,
     link: "https://feedback-portal-vincent.vercel.app",
   },
   {
     name: "Citizen Grievance Portal",
     description:
-      "A modern web platform designed to streamline the submission and tracking of civic issues, featuring an intuitive UI and efficient routing of user reports.",
-    tags: [{ name: "nextjs" }, { name: "fullstack" }, { name: "modern-ui" }],
+      "A civic grievance platform with citizen, department and admin roles. Complaints route to the right department, with speech-to-text, multilingual input and a CMS-style admin panel for homepage content.",
+    tags: [{ name: "nextjs" }, { name: "supabase" }, { name: "i18n" }],
     image: citizen,
     link: "https://citizen-grievance-portal-vincent.vercel.app/en",
-  },
-  {
-    name: "VU Connect",
-    description:
-      "An inclusive social networking platform for the VU community, integrating Firebase authentication to foster open community engagement and networking among students, faculty, and alumni.",
-    tags: [{ name: "react" }, { name: "firebase" }, { name: "tailwindcss" }],
-    image: vuconnect,
-    link: "https://github.com/vincentvarghese01",
-  },
-  {
-    name: "The Metaverse Landing Page",
-    description:
-      "A visually captivating and interactive landing page showcasing the concept of the metaverse. Designed with immersive visuals and CSS animations to entice visitors into exploring virtual environments.",
-    tags: [{ name: "react" }, { name: "css-animations" }, { name: "ui-ux" }],
-    image: metaverse,
-    link: "https://meta-land.netlify.app/",
-  },
-  {
-    name: "Typing Game",
-    description:
-      "An interactive typing game featuring random sentence generation and a built-in timer. Implemented real-time feedback by highlighting correct and incorrect characters dynamically to improve typing speed.",
-    tags: [{ name: "vanilla-js" }, { name: "html" }, { name: "css" }],
-    image: typingame,
-    link: "https://typiiingame.netlify.app/",
-  },
-  {
-    name: "Basic Website Template",
-    description:
-      "A basic website template for businesses and organizations. Build as part of internship program",
-    tags: [{ name: "html" }, { name: "css" }],
-    image: pharma,
-    link: "https://virtue-pharma.netlify.app/",
   },
 ];
 

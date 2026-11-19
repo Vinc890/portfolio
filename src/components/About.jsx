@@ -54,11 +54,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[15px] max-w-3xl leading-[26px] tracking-wide font-light border-l border-white/10 pl-6"
       >
-        I am a dedicated software developer specializing in high-performance
-        full-stack architectures, clean corporate dashboards, and robust
-        generative AI systems. By leveraging optimized interfaces and geometric
-        design structures, I ensure all enterprise platforms deliver
-        exceptional, stable, and highly responsive user experiences.
+        I'm a senior software developer at a small product studio, where I've
+        taken products from the first client call to production. Recently I've
+        been building AI voice-agent products: live voice and video sessions
+        with AI personas, media pipelines on GCP, and LLM-based evaluation.
+        Before that, I built a schema-driven form engine for ESG compliance
+        reporting and offline-first tools for teams working without
+        connectivity.
       </motion.p>
 
       <div className="mt-16 flex flex-wrap gap-8 justify-center">

@@ -8,9 +8,11 @@ import {
   Navbar,
   Tech,
   Works,
+  CaseStudy,
   StarsCanvas,
   CinematicCanvas,
 } from "./components";
+import { showCaseStudy } from "./constants";
 
 const App = () => {
   return (
@@ -31,6 +33,12 @@ const App = () => {
         <div className="relative z-10 bg-transparent">
           <Experience />
         </div>
+
+        {showCaseStudy && (
+          <div className="relative z-10 bg-transparent">
+            <CaseStudy />
+          </div>
+        )}
 
         <div className="relative z-10 bg-transparent">
           <Tech />
