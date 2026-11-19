@@ -111,7 +111,7 @@ export const experiences = [
   {
     title: "Software Developer Intern",
     company_name: "BlitzCode Systems",
-    date: "Jan 2023 - Jun 2023",
+    date: "Jan 2023 - Jul 2023",
     points: [
       "Moved a client's React site to Next.js so its pages could be pre-rendered for better SEO.",
       "Cleaned up the UI along the way.",
